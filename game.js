@@ -341,7 +341,7 @@ class GamePlay extends Phaser.Scene {
   // EVENTOS
   myWorker = new Worker("sw.js");
   sendMsg(eventName){
-    this.myWorker.postMessage(value);
+    this.myWorker.postMessage(eventName);
     console.log(eventName);
   }
 
