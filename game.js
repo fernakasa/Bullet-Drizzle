@@ -105,7 +105,7 @@ class GamePlay extends Phaser.Scene {
     this.enemies.add(this.enemy3);
     this.enemies.add(this.enemy4);
 
-    console.log(this.enemies.getChildren())
+    //console.log(this.enemies.getChildren())
 
     this.enemies.getChildren().forEach((enemy) => {
       enemy.setScale(0.4);
@@ -362,7 +362,7 @@ class GamePlay extends Phaser.Scene {
   can_loop = false;
 
   update() {
-    console.log(this.elapsed);
+    //console.log(this.elapsed);
     if (Phaser.Input.Keyboard.JustDown(this.enterKey)) {
       this.can_loop = !this.can_loop;
       this.time_timer.paused = !this.time_timer.paused;
@@ -383,7 +383,7 @@ class GamePlay extends Phaser.Scene {
           this.shootBullet();
           this.projectilSound.play();
           // EVENTO disparar
-          console.log("Fire");
+          //console.log("Fire");
         }
       }
       for (let index = 0; index < this.projectiles.getChildren().length; index++) {
