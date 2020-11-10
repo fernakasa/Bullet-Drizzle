@@ -350,7 +350,7 @@ class GamePlay extends Phaser.Scene {
   setScore(value){
     this.score += value;
     this.textScore.text = "Puntaje: " + this.score;
-    sendMsg("setScore")
+    this.sendMsg("setScore");
   }
 
   elapsed = 0;
