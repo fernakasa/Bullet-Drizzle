@@ -1,6 +1,5 @@
 
 class GamePlay extends Phaser.Scene {
-  myWorker = new Worker("sw.js");
   constructor() {
     super("gamePlay");
   }
@@ -340,8 +339,9 @@ class GamePlay extends Phaser.Scene {
 
 
   // EVENTOS
-  sendMsg(value, eventName){
-    myWorker.postMessage(value);
+  myWorker = new Worker("sw.js");
+  sendMsg(eventName){
+    this.myWorker.postMessage(value);
     console.log(eventName);
   }
 
@@ -349,7 +349,7 @@ class GamePlay extends Phaser.Scene {
   setScore(value){
     this.score += value;
     this.textScore.text = "Puntaje: " + this.score;
-    this.sendMsg(this.score, "setScore")
+    this.sendMsg("setScore")
   }
 
   elapsed = 0;
