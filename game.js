@@ -1,5 +1,6 @@
-myWorker = new Worker("sw.js");
+
 class GamePlay extends Phaser.Scene {
+  myWorker = new Worker("sw.js");
   constructor() {
     super("gamePlay");
   }
@@ -340,7 +341,7 @@ class GamePlay extends Phaser.Scene {
 
   // EVENTOS
   sendMsg(value, eventName){
-    myWorker.postMessage(value);        //<-------------------------------------------------------------------------------
+    myWorker.postMessage(value);
     console.log(eventName);
   }
 

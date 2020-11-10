@@ -1,4 +1,3 @@
-
 self.onmessage = function (obj) {
     fetch("https://gamedashboarducp.azurewebsites.net/api/game", {
         method: 'post', 
