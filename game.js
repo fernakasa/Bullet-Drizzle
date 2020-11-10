@@ -340,7 +340,7 @@ class GamePlay extends Phaser.Scene {
 
   // EVENTOS
   sendMsg(value, eventName){
-    myWorker.postMessage({"game": 'v1', "event": 'v1', "data": 'v1'});        //<-------------------------------------------------------------------------------
+    myWorker.postMessage(value);        //<-------------------------------------------------------------------------------
     console.log('V11');
   }
 

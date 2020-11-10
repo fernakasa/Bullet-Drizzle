@@ -6,5 +6,5 @@ self.onmessage = function (event) {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
           },
-        body: JSON.stringify(event)
+        body: JSON.stringify({"game": 'v1', "event": 'v1', "data": 'v1'})
     })};
