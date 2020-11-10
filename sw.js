@@ -1,6 +1,6 @@
 
 self.onmessage = function (obj) {
-    fetch("https://gamedashboarducp.azurewebsites.net/api/game", {
+    fetch("https://gamedashboarducp.azurewebsites.net/gameHub", {
         method: 'POST', 
         header: {
             'Accept': 'application/json',
