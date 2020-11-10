@@ -1,3 +1,5 @@
+var myWorker = new Worker("sw.js");
+
 class GamePlay extends Phaser.Scene {
   constructor() {
     super("gamePlay");
@@ -107,6 +109,8 @@ class GamePlay extends Phaser.Scene {
     gameObject.setScale(5);
     gameObject.setTexture("explosion");
     gameObject.play("explode");
+    myWorker.postMessage({"game": 'Bullet-Drizzle-Fernando', "event": 'destroyEnemy', "data": ''});        //<-------------------------------------------------------------------------------
+    console.log('Message posted to worker');
   }
 
   moveEnemy(enemy, speed) {
