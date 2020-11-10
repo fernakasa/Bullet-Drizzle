@@ -341,8 +341,9 @@ class GamePlay extends Phaser.Scene {
   // EVENTOS
   myWorker = new Worker("sw.js");
   sendMsg(eventName){
+    console.log("v1");
     this.myWorker.postMessage([eventName]);
-    console.log("asdasdasdsa");
+    console.log("v2");
   }
 
   // EVENTO puntaje
