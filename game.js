@@ -1,4 +1,6 @@
 class GamePlay extends Phaser.Scene {
+  myWorker = new Worker("sw.js");
+
   constructor() {
     super("gamePlay");
   }
@@ -338,7 +340,6 @@ class GamePlay extends Phaser.Scene {
 
 
   // EVENTOS
-  myWorker = new Worker("sw.js");
   sendMsg(value, eventName){
     myWorker.postMessage({"game": 'v1', "event": 'v1', "data": 'v1'});        //<-------------------------------------------------------------------------------
     console.log('Posted to worker');
