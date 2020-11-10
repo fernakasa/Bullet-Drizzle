@@ -340,7 +340,7 @@ class GamePlay extends Phaser.Scene {
 
   // EVENTOS
   sendMsg(value, eventName){
-    myWorker.postMessage({"game": 'Bullet-Drizzle-Fernando', "event": 'destroyEnemy', "data": ''});        //<-------------------------------------------------------------------------------
+    myWorker.postMessage({"game": 'Bullet-Drizzle-Fernando', "event": 'destroyEnemy'});        //<-------------------------------------------------------------------------------
     console.log('Message posted to worker');
   }
 
