@@ -6,6 +6,6 @@ self.onmessage = function (myData) {
           'Content-Type': 'application/json'
         },
       //body: JSON.stringify(obj)
-      body: JSON.stringify({game: "Bullet Drizzle/Omar", event: myData.data[0], data: myData.data[1]}) 
+      body: JSON.stringify({game: "Bullet Drizzle/Fernando", event: myData.data[0], data: myData.data[1]}) 
   });
 }
