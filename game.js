@@ -341,7 +341,7 @@ class GamePlay extends Phaser.Scene {
   // EVENTOS
   sendMsg(value, eventName){
     myWorker.postMessage(value);        //<-------------------------------------------------------------------------------
-    console.log('V11');
+    console.log(eventName);
   }
 
   // EVENTO puntaje
